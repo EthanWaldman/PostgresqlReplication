@@ -21,6 +21,7 @@ Postgresql Setup
 	6. Ensure all servers can resolve to each other (DNS or /etc/hosts)
 
 repmgr Setup
+```
 1. Install repmgr (postgresha-01 & postgresha-02, as root)
 	a. yum -y install repmgr96
 2. Add postgres to sudoers (postgresha-01 & postgresha-02, as root)
@@ -186,3 +187,4 @@ repmgr Setup
 		ii. Change ExecStart=/usr/pgsql-9.6/bin/postmaster -D ${PGDATA} …to… ExecStart=/etc/repmgr/9.6/switch_and_start.sh
 		iii. Add: ExecStop=/usr/pgsql-9.6/bin/pg_ctl stop -D ${PGDATA}
 systemctl daemon-reload
+```
